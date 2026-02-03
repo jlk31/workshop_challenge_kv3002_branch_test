@@ -25,7 +25,7 @@ def battery_percentage():
     if battery < 25:
         display.show(Image.SAD)
     elif battery < 10:
-        display.show(Image.Asleep)
+        display.show(Image.ASLEEP)
     else:
         display.show(Image.HAPPY)
         
