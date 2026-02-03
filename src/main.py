@@ -68,9 +68,9 @@ def update():
 def battery_percentage():
     battery = 100
 
-    if battery < 25:
+    if battery < 10:
         display.show(Image.SAD)
-    elif battery < 10:
+    elif battery < 25:
         display.show(Image.ASLEEP)
     else:
         display.show(Image.HAPPY)
