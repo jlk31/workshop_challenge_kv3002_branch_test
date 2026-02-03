@@ -19,6 +19,18 @@ from microbit import *
 #====================================
 
 # Battery percentage
+def battery_percentage():
+    battery = 100
+
+    if battery < 25:
+        display.show(Image.SAD)
+    elif battery < 10:
+        display.show(Image.Asleep)
+    else:
+        display.show(Image.HAPPY)
+        
+    microbit.sleep(5000)
+    
 
 
 
