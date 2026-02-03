@@ -15,7 +15,7 @@ MAX_O2_READING = 800  # Example maximum value for O2 level corresponding to top 
 
 def read_o2_percentage():
     raw = pin0.read_analog()
-    ratio = (raw - ROOM_O2_READING) / float(MAX_READING - ROOM_O2_READING)
+    ratio = (raw - ROOM_O2_READING) / float(MAX_O2_READING - ROOM_O2_READING)
     o2 = 21 + ratio * 4
 
     if o2 < 0:
