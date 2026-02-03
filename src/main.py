@@ -10,7 +10,20 @@ radio.config(channel=7)
 
 # O2 level
 
+ROOM_O2_READING = 600  # Example baseline value for room O2 level corresponding to ~21% of sensor range
+MAX_O2_READING = 800  # Example maximum value for O2 level corresponding to top of sensor range
 
+def read_o2_percentage():
+    raw = pin0.read_analog()
+    ratio = (raw - ROOM_O2_READING) / float(MAX_READING - ROOM_O2_READING)
+    o2 = 21 + ratio * 4
+
+    if o2 < 0:
+        o2 = 0
+    elif o2 > 25:
+        o2 = 25
+
+    return o2
 
 # CO2 level
 
