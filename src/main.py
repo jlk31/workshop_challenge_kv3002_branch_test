@@ -27,6 +27,25 @@ def read_o2_percentage():
 
 # CO2 level
 
+MIN_PPM = 400
+MAX_PPM = 5000
+
+def read_co2_ppm():
+    light = display.read_light_level()
+    ratio = 1.0 - (light / 255.0)
+    co2 = MIN_PPM + ratio * (MAX_PPM - MIN_PPM)
+    return int(co2)
+
+def update():
+    o2_level = read_o2_percentage()
+    co2_ppm = read_co2_ppm()
+
+    if o2_level < 19.5 and co2_ppm > 1500:
+        display.show("L")
+    else:
+        display.clear()
+
+    return o2_level, co2_ppm
 
 
 # Pressure level
