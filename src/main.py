@@ -6,7 +6,7 @@ from microbit import *
 
 # O2 level
 
-oxy_level_input = input.light_level()
+
 
 # CO2 level
 
@@ -19,25 +19,6 @@ oxy_level_input = input.light_level()
 #====================================
 
 # Battery percentage
-
-def battery_level():
-
-    battery = 100
-
-    if battery < 25:
-        basic.show_string("Warning")
-
-    elif battery < 10: 
-        basic.show_string("Critical")
-
-    else:
-        basic.show_number(battery)
-
-    basic.pause(5000)
-
-    
-
-    
 
 
 
@@ -68,6 +49,4 @@ def battery_level():
 
 # on_forever method
 
-def on_forever():
-    pass
-basic.forever(on_forever)
+
