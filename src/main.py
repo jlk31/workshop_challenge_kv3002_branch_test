@@ -25,16 +25,6 @@ def read_o2_percentage():
 
     return o2
 
-def update():
-    o2_level = read_o2_percentage()
-    
-    if o2_level < 19.5:
-        display.show(Image.L)
-    else:
-        display.clear()
-    
-    return o2_level
-
 # CO2 level
 
 MIN_PPM = 400
@@ -65,6 +55,7 @@ def update():
 #====================================
 
 # Battery percentage
+
 def battery_percentage():
     battery = 100
 
