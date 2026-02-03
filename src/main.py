@@ -60,5 +60,13 @@ def battery_percentage():
 
 
 # on_forever method
+def on_forever():
+    while True:
+        battery_percentage()
 
+        if microbit.button_a.is_pressed():
+            pass # Placeholder for co2 level function call
+        if microbit.button_b.is_pressed():
+            pass # Placeholder for o2 function call
 
+on_forever()
