@@ -111,8 +111,8 @@ def on_forever():
         battery_percentage()
 
         if microbit.button_a.is_pressed():
-            pass # Placeholder for co2 level function call
+            read_co2_ppm()
         if microbit.button_b.is_pressed():
-            pass # Placeholder for o2 function call
+            read_o2_percentage()
 
 on_forever()
