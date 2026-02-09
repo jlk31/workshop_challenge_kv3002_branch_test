@@ -47,7 +47,6 @@ def update():
 
     return o2_level, co2_ppm
 
-
 # Pressure level
 
 #====================================
